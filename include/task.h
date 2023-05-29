@@ -3196,7 +3196,7 @@ extern "C"
 /*
 *Privileged function for accessing the value from the TCB for priting
 */
-uint32_t getCustomCount() PRIVILEGED_FUNCTION;
+uint32_t getTaskCustomCount() PRIVILEGED_FUNCTION;
 
 /* *INDENT-ON* */
 #endif /* INC_TASK_H */

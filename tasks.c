@@ -5492,7 +5492,7 @@ static void prvAddCurrentTaskToDelayedList(TickType_t xTicksToWait,
  * especially where access to file scope functions and data is needed (for example
  * when performing module tests). */
 
-uint32_t getCustomCount()
+uint32_t getTaskCustomCount()
 {
     return pxCurrentTCB->portCustomCount;
 }
