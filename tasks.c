@@ -5492,6 +5492,11 @@ static void prvAddCurrentTaskToDelayedList(TickType_t xTicksToWait,
  * especially where access to file scope functions and data is needed (for example
  * when performing module tests). */
 
+uint32_t getCustomCount()
+{
+    return pxCurrentTCB->portCustomCount;
+}
+
 #ifdef FREERTOS_MODULE_TEST
 #include "tasks_test_access_functions.h"
 #endif
@@ -5506,5 +5511,6 @@ static void freertos_tasks_c_additions_init(void)
     FREERTOS_TASKS_C_ADDITIONS_INIT();
 }
 #endif
+
 
 #endif /* if ( configINCLUDE_FREERTOS_TASK_C_ADDITIONS_H == 1 ) */
